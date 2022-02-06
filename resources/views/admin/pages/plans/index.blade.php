@@ -36,8 +36,8 @@
                                 {{ $plan->price }}
                             </td>
                             <td>
-                                <a href="" class="btn btn-warning">
-                                    Ação
+                                <a href="{{ route('plans.show', $plan->url) }}" class="btn btn-warning">
+                                    Ver
                                 </a>
                             </td>
                         </tr>
