@@ -3,7 +3,9 @@
 @section('title', 'Planos')
 
 @section('content_header')
-    <h1>Planos</h1>
+    <h1>
+        Planos <a href="{{ route('plans.create') }}">Criar</a>
+    </h1>
 @stop
 
 @section('content')
@@ -40,15 +42,11 @@
            </table>
        </div>
        <div class="card-footer">
-           {!! $plans->links() !!}
+           {{ $plans->links() }}
        </div>
     </div>
 @stop
 
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-    <script> console.log('Hi!'); </script>
 @stop
