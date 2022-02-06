@@ -4,7 +4,7 @@
 
 @section('content_header')
     <h1>
-        Planos <a href="{{ route('plans.create') }}">Criar</a>
+        Planos <a class="btn btn-primary" href="{{ route('plans.create') }}">Criar</a>
     </h1>
 @stop
 
@@ -18,6 +18,7 @@
                <thead>
                    <tr>
                        <th>Nome</th>
+                       <th>Url</th>
                        <th>Preço</th>
                        <th>Ações</th>
                    </tr>
@@ -27,6 +28,9 @@
                         <tr>
                             <td>
                                 {{ $plan->name }}
+                            </td>
+                            <td>
+                                {{ $plan->url }}
                             </td>
                             <td>
                                 {{ $plan->price }}
